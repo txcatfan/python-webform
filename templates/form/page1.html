@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTDR Adoption Application Form</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/app.css">
+</head>
+<body>
+
+  <form action="/form/page1" method="POST">
+
+    <h2>CTDR Adoption Application</h2>
+
+    <fieldset>
+        <legend>Applicant Information</legend>
+
+        <label for="name">Name:<span class="required">*</span></label>
+        <input type="text" id="name" name="name" value="{{ page1_data.get('name', '') }}" required>
+
+        <label for="email">Email:<span class="required">*</span></label>
+        <input type="email" id="email" name="email" value="{{ page1_data.get('email', '') }}" required><br><br>
+
+        <label for="phone">Phone Number:<span class="required">*</span></label>
+        <input type="text" id="phone" name="phone" value="{{ page1_data.get('phone', '') }}" required>
+
+        <label for="addr1">Address1:<span class="required">*</span></label>
+        <input type="text" id="addr1" name="addr1" value="{{ page1_data.get('addr1', '') }}" required>
+
+        <label for="addr2">Address2:</label>
+        <input type="text" id="addr2" name="addr2" value="{{ page1_data.get('addr2', '') }}">
+
+        <label for="city">City:<span class="required">*</span></label>
+        <input type="text" id="city" name="city" value="{{ page1_data.get('city', '') }}" required>
+
+        <label for="state">State:<span class="required">*</span></label>
+        <select id="state" name="state" style="height: 40px;" required>
+          <option value="TX" {% if page1_data.get('state') == 'TX' %}selected{% endif %}>Texas</option>
+        </select>
+
+        <label for="zipcode">Zipcode:<span class="required">*</span></label>
+        <input type="text" id="zipcode" name="zipcode" value="{{ page1_data.get('zipcode', '') }}" required>
+
+        <label for="vetName">Veterinarian's Name:</label>
+        <input type="text" id="vetName" name="vetName" value="{{ page1_data.get('vetName', '') }}">
+
+        <label for="vetPhone">Veterinarian's Phone Number:</label>
+        <input type="text" id="vetPhone" name="vetPhone" value="{{ page1_data.get('vetPhone', '') }}">
+
+        <label for="landlordName">Landlord's Name (if applicable):</label>
+        <input type="text" id="landlordName" name="landlordName" value="{{ page1_data.get('landlordName', '') }}">
+
+        <label for="landlordPhone">Landlord's Phone Number (if applicable):</label>
+        <input type="text" id="landlordPhone" name="landlordPhone" value="{{ page1_data.get('landlordPhone', '') }}">
+
+        <label for="desiredDog">Desired Dog(s):</label>
+        <textarea id="desiredDog" name="desiredDog">{{ page1_data.get('desiredDog', '') }}</textarea>
+    </fieldset>
+    <br>
+
+    <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+      <button type="submit" id="submitButton" style="margin-left: auto;">Proceed to Page 2</button>
+    </div>
+
+  </form>
+  <br>
+  <div class="container" style="text-align: center; margin-bottom: 20px;">
+    <button type="button" class="button" onclick="window.location.href='/clear_answers'">Clear All Answers</button>
+  </div>
+
+
+<script src="../static/js/script-callFlask.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTDR Adoption Application Form</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/app.css">
+</head>
+<body>
+
+  <form action="/form/page3" method="POST">
+
+    <h2>CTDR Adoption Application</h2>
+
+    <fieldset>
+        <legend>Pet Information</legend>
+
+        <p>Do you currently have any pets?</p>
+        <input type="radio" id="pets_yes" name="current_pets" value="yes" {% if page3_data.get('current_pets') == 'yes' %}checked{% endif %}>
+        <label for="pets_yes">Yes</label>
+
+        <input type="radio" id="pets_no" name="current_pets" value="no" {% if page3_data.get('current_pets') == 'no' %}checked{% endif %}>
+        <label for="pets_no">No</label><br><br>
+
+        <label for="pet_details">If yes, please list type, age, and breed:</label>
+        <textarea id="pet_details" name="pet_details" rows="4" cols="50">{{ page3_data.get('pet_details', '') }}</textarea><br><br>
+
+        <p>Have you ever surrendered a pet to a shelter or rescue?</p>
+        <input type="radio" id="surrender_yes" name="surrender" value="yes" {% if page3_data.get('surrender') == 'yes' %}checked{% endif %}>
+        <label for="surrender_yes">Yes</label>
+
+        <input type="radio" id="surrender_no" name="surrender" value="no" {% if page3_data.get('surrender') == 'no' %}checked{% endif %}>
+        <label for="surrender_no">No</label><br><br>
+
+        <label for="surrender_details">If yes, please explain:</label>
+        <textarea id="surrender_details" name="surrender_details" rows="4" cols="50">{{ page3_data.get('surrender_details', '') }}</textarea><br><br>
+    </fieldset>
+
+    <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+        <button type="button" onclick="window.location.href='/form/page2'" style="margin-right: auto;">Back to Page 2</button>
+        <button type="submit" id="submitButton" style="margin-left: auto;">Proceed to Page 4</button>
+    </div>
+
+ </form>
+
+ <br>
+ <div class="container" style="text-align: center; margin-bottom: 20px;">
+   <button type="button" class="button" onclick="window.location.href='/clear_answers'">Clear All Answers</button>
+ </div>
+
+
+<script src="../static/js/script-callFlask.js"></script>
+</body>
+</html>
