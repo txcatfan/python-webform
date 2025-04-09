@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTDR Adoption Application Form</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/app.css">
+</head>
+
+<body>
+
+    <form id="review_application" action="/form/review" method="POST">
+
+        <h2>CTDR Adoption Application</h2>
+
+        <fieldset>
+            <legend>Applicant Information</legend>
+
+            <p><strong>Name:</strong> {{ review_data['page1_data'].get('name', '') }}</p>
+            <p><strong>Email:</strong> {{ review_data['page1_data'].get('email', '') }}</p>
+            <p><strong>Phone Number:</strong> {{ review_data['page1_data'].get('phone', '') }}</p>
+            <p><strong>Address1:</strong> {{ review_data['page1_data'].get('addr1', '') }}</p>
+            <p><strong>Address2:</strong> {{ review_data['page1_data'].get('addr2', '') }}</p>
+            <p><strong>City:</strong> {{ review_data['page1_data'].get('city', '') }}</p>
+            <p><strong>State:</strong> {{ review_data['page1_data'].get('state', '') }}</p>
+            <p><strong>Zipcode:</strong> {{ review_data['page1_data'].get('zipcode', '') }}</p>
+            <p><strong>Veterinarian's Name:</strong> {{ review_data['page1_data'].get('vetName', '') }}</p>
+            <p><strong>Veterinarian's Phone Number:</strong> {{ review_data['page1_data'].get('vetPhone', '') }}</p>
+            <p><strong>Landlord's Name (if applicable):</strong> {{ review_data['page1_data'].get('landlordName', '') }}
+            </p>
+            <p><strong>Landlord's Phone Number (if applicable):</strong> {{
+                review_data['page1_data'].get('landlordPhone', '') }}</p>
+            <p><strong>Desired Dog(s):</strong> {{ review_data['page1_data'].get('desiredDog', '') }}</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Home Information</legend>
+
+            <p><strong>Type of Dwelling:</strong> {{ review_data['page2_data'].get('dwelling', '') }}</p>
+            <p><strong>Number of Adults in Household:</strong> {{ review_data['page2_data'].get('adults', '') }}</p>
+            <p><strong>Number of Children in Household:</strong> {{ review_data['page2_data'].get('children', '') }}</p>
+            <p><strong>Do you have a fenced yard?:</strong> {{ review_data['page2_data'].get('fence', '') }}</p>
+            <p><strong>Employer:</strong> {{ review_data['page2_data'].get('employer', '') }}</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pet Ownership History</legend>
+
+            <p><strong>Do you currently own any pets?:</strong> {{ review_data['page3_data'].get('own_pets', '') }}</p>
+            <p><strong>If yes, please list their names, breeds, and ages:</strong> {{
+                review_data['page3_data'].get('pet_details', '') }}</p>
+            <p><strong>Have you owned pets in the past?:</strong> {{ review_data['page3_data'].get('past_pets', '') }}
+            </p>
+            <p><strong>If yes, what happened to them?:</strong> {{ review_data['page3_data'].get('past_pet_details', '')
+                }}</p>
+            <p><strong>Are your current pets spayed or neutered?:</strong> {{
+                review_data['page3_data'].get('spayed_neutered', '') }}</p>
+            <p><strong>Are your pets up-to-date on vaccinations?:</strong> {{
+                review_data['page3_data'].get('vaccinations', '') }}</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dog Preference</legend>
+
+            <p><strong>Dog Name (if known):</strong> {{ review_data['page4_data'].get('dog_name', '') }}</p>
+            <p><strong>Preferred Breed:</strong> {{ review_data['page4_data'].get('dog_breed', '') }}</p>
+            <p><strong>Preferred Age:</strong> {{ review_data['page4_data'].get('dog_age', '') }}</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Terms and Conditions</legend>
+
+            <p><strong>Agreement:</strong> {{ review_data['page5_data'].get('agreement', 'No') }}</p>
+            <p><strong>Signature:</strong> {{ review_data['page5_data'].get('signature', '') }}</p>
+            <p><strong>Date:</strong> {{ review_data['page5_data'].get('date', '') }}</p>
+        </fieldset>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="button" onclick="window.location.href='/form/page5'" style="margin-right: auto;">Back to Page
+                5</button>
+            <button type="submit" id="submitButton" style="margin-left: auto;">SUBMIT APPLICATION</button>
+        </div>
+
+    </form>
+
+    <br>
+    <div class="container" style="text-align: center; margin-bottom: 20px;">
+        <button type="button" class="button" onclick="confirmClearAnswers()">Clear All Answers</button>
+    </div>
+
+    <script src="../static/js/script-callFlask.js"></script>
+</body>
+
+</html>
