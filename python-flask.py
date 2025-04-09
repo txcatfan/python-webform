@@ -23,39 +23,57 @@ def clear_answers():
 @app.route('/form/page1', methods=['GET', 'POST'])
 def page1():
     if request.method == 'POST':
-        # Process data from page 1
-        # For example:
-        #session['page1_data'] = request.get_json()
-        #print (session['page1_data'])
         session['page1_data'] = request.form
         print(session['page1_data'])
-        return redirect("/form/page2")  # Redirect to the route for page 2
+        return redirect("/form/page2")
     page1_data = session.get('page1_data', {})
     return render_template('form/page1.html', page1_data=page1_data)
 
 @app.route('/form/page2', methods=['GET', 'POST'])
 def page2():
     if request.method == 'POST':
-        # Process data from page 2
-        # For example:
         session['page2_data'] = request.form
         print(session['page2_data'])
         print(session)
-        return redirect("/form/page3")  # Redirect to the route for page 3
+        return redirect("/form/page3")  
     page2_data = session.get('page2_data', {})
     return render_template('form/page2.html', page2_data=page2_data)
 
 @app.route('/form/page3', methods=['GET', 'POST'])
 def page3():
     if request.method == 'POST':
-        # Process data from page 2
-        # For example:
         session['page3_data'] = request.form
         print(session['page3_data'])
         print(session)
-        return redirect("/form/page1")  # Redirect to the route for page 3
+        return redirect("/form/page4") 
     page3_data = session.get('page3_data', {})
     return render_template('form/page3.html', page3_data=page3_data)
+
+@app.route('/form/page4', methods=['GET', 'POST'])
+def page4():
+    if request.method == 'POST':
+        session['page4_data'] = request.form
+        print(session['page4_data'])
+        print(session)
+        return redirect("/form/page5")
+    page4_data = session.get('page4_data', {})
+    return render_template('form/page4.html', page4_data=page4_data)
+
+@app.route('/form/page5', methods=['GET', 'POST'])
+def page5():
+    if request.method == 'POST':
+        session['page5_data'] = request.form
+        print(session['page5_data'])
+        print(session)
+        return redirect("/form/review")
+    page5_data = session.get('page5_data', {})  
+    return render_template('form/page5.html', page5_data=page5_data)
+
+@app.route('/form/review', methods=['GET', 'POST'])
+def review():
+    print(session)
+    return render_template('form/review.html', review_data=session)
+
 
 # @app.route('/submit-application', methods=['POST'])
 # def submit_application():
