@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function validateForm() {
         let allFilled = true; // Assume all are filled initially
+        
 
         for (let i = 0; i < requiredFields.length; i++) {
             const field = requiredFields[i];
@@ -52,7 +53,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     allFilled = false;
                     break;
                 }
-            } else {
+            }
+            else if (field.type === 'radio') {
+                if (!field.checked) {
+                    allFilled = false;
+                    break;
+                }
+            }
+            else {
                 if (!field.value.trim()) { // Check if value is empty or whitespace
                     allFilled = false;
                     break;
@@ -69,9 +77,16 @@ document.addEventListener('DOMContentLoaded', function() {
     requiredFields.forEach(field => {
         field.addEventListener('input', validateForm); // For text inputs
         field.addEventListener('change', validateForm); // For checkboxes, select etc.
+        field.addEventListener('click', validateForm); // For radio buttons
     });
 });
 
+function confirmClearAnswers() {
+    const userConfirmed = confirm("Are you sure??  This will clear all of your answers and start over!");
+    if (userConfirmed) {
+      window.location.href = '/clear_answers';
+    }
+}
 
 
 //
