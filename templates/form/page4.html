@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTDR Adoption Application Form</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/app.css">
+</head>
+
+<body>
+
+  <form id="dog_preference" action="/form/page4" method="POST">
+
+    <h2>CTDR Adoption Application</h2>
+
+    <fieldset>
+      <legend>Dog Preference</legend>
+
+      <label for="dog_name">Dog Name (if known):</label>
+      <!-- Added value attribute using session data -->
+      <input type="text" id="dog_name" name="dog_name" value="{{ page4_data.get('dog_name', '') }}"><br><br>
+
+      <label for="dog_breed">Preferred Breed:</label>
+      <select id="dog_breed" name="dog_breed">
+        <option value="Dachshund" {% if page4_data.get('dog_breed', 'Dachshund' )=='Dachshund' %}selected{% endif %}>
+          Dachshund</option>
+        <option value="Dachshund Mix" {% if page4_data.get('dog_breed')=='Dachshund Mix' %}selected{% endif %}>Dachshund
+          Mix</option>
+      </select><br><br>
+
+      <label for="dog_age">Preferred Age:</label>
+      <select id="dog_age" name="dog_age">
+        <option value="Puppy - Under 1 year" {% if page4_data.get('dog_age')=='Puppy - Under 1 year' %}selected{% endif
+          %}>Puppy - Under 1 year</option>
+        <option value="Adult - 1 to 9 years old" {% if page4_data.get('dog_age', 'Adult - 1 to 9 years old'
+          )=='Adult - 1 to 9 years old' %}selected{% endif %}>Adult - 1 to 9 years old</option>
+        <option value="Senior - 9 years or older" {% if page4_data.get('dog_age')=='Senior - 9 years or older'
+          %}selected{% endif %}>Senior - 9 years or older</option>
+      </select><br><br>
+    </fieldset>
+
+
+    <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+      <button type="button" onclick="window.location.href='/form/page3'" style="margin-right: auto;">Back to Page
+        3</button>
+      <button type="submit" id="submitButton" style="margin-left: auto;">Proceed to Page 5</button>
+    </div>
+
+  </form>
+
+  <br>
+  <div class="container" style="text-align: center; margin-bottom: 20px;">
+    <button type="button" class="button" onclick="confirmClearAnswers()">Clear All Answers</button>
+  </div>
+
+
+  <script src="../static/js/script-callFlask.js"></script>
+</body>
+
+</html>

@@ -14,8 +14,8 @@
     <fieldset>
       <legend>Home Information</legend>
 
-      <p>Type of Dwelling:</p>
-      <input type="radio" id="house" name="dwelling" value="house" {% if page2_data.get('dwelling') == 'house' %}checked{% endif %}>
+      <p>Type of Dwelling:<span class="required">*</span></p>
+      <input type="radio" id="house" name="dwelling" value="house" {% if page2_data.get('dwelling') == 'house' %}checked{% endif %} checked>
       <label for="house">House</label>
 
       <input type="radio" id="apartment" name="dwelling" value="apartment" {% if page2_data.get('dwelling') == 'apartment' %}checked{% endif %}>
@@ -34,7 +34,7 @@
       <input type="radio" id="fence_yes" name="fence" value="yes" {% if page2_data.get('fence') == 'yes' %}checked{% endif %}>
       <label for="fence_yes">Yes</label>
 
-      <input type="radio" id="fence_no" name="fence" value="no" {% if page2_data.get('fence') == 'no' %}checked{% endif %}>
+      <input type="radio" id="fence_no" name="fence" value="no" {% if page2_data.get('fence') == 'no' %}checked{% endif %} checked>
       <label for="fence_no">No</label><br><br>
 
       <label for="employer">Employer:</label>
@@ -48,7 +48,7 @@
 
   <br>
   <div class="container" style="text-align: center; margin-bottom: 20px;">
-    <button type="button" class="button" onclick="window.location.href='/clear_answers'">Clear All Answers</button>
+    <button type="button" class="button" onclick="confirmClearAnswers()">Clear All Answers</button>
   </div>
 
 <script src="../static/js/script-callFlask.js"></script>
