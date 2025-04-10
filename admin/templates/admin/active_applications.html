@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Active Adoption Applications</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Active Adoption Applications</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Applicant Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Application Date</th>
+                </tr>
+        </thead>
+        <tbody>
+            {% for application in applications %}
+                <tr>
+                    <td>{{ application.applicantName }}</td>
+                    <td>{{ application.emailAddress }}</td>
+                    <td>{{ application.homePhone }}</td>
+                    <td>{{ application.interviewDate }}</td>
+                    </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
