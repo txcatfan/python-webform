@@ -1,10 +1,16 @@
 from flask import Blueprint, render_template
 import firebase_admin
-from firebase_admin import firestore
+from firebase_admin import credentials, firestore
 
 admin_bp = Blueprint('admin', __name__, url_prefix='/admin', template_folder='templates/admin')  # Define the Blueprint
 
-db = firestore.client()  # Assuming you've initialized Firebase elsewhere
+cred_path = "./creds/mab-comercio-de-acciones-aeae38e733ed.json" #store the path
+cred = credentials.Certificate(cred_path)
+# Check if Firebase Admin is already initialized
+if not firebase_admin._apps:
+    firebase_admin.initialize_app(cred)
+
+db = firestore.client(database_id="Applications")
 
 @admin_bp.route('/active_applications')
 def active_applications():
