@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify, session, redirect, u
 import json
 import dotenv
 import os 
-from your_app.admin.views import admin_bp  # Import the Blueprint
+from admin.admin_functions import admin_bp  # Import the Blueprint
 import firebase_admin
 from firebase_admin import credentials, firestore
 
