@@ -4,174 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTDR Phone Interview Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/interview.css"> 
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100">
 
-    <h1>Central Texas Dachshund Rescue (CTDR) Phone Interview Form</h1>
+    <h1 class="text-3xl font-bold mb-6 text-gray-900 text-center">Central Texas Dachshund Rescue (CTDR) Phone Interview Form</h1>
 
-    <form id="interviewForm">
-        <fieldset>
-            <legend>Interview Information</legend>
-            <div>
-                <label for="interviewDate">Date of Interview:</label>
-                <input type="date" id="interviewDate" name="interviewDate">
+    <form id="interviewForm" class="max-w-2xl mx-auto bg-gray-50 p-6 rounded-lg shadow-md">
+        <fieldset class="mb-8 p-6 rounded-lg bg-white border border-gray-200">
+            <legend class="text-lg font-semibold text-gray-700 mb-4">Interview Information</legend>
+            <div class="mb-4">
+                <label for="interviewDate" class="block text-gray-700 text-sm font-bold mb-2">Date of Interview:</label>
+                <input type="date" id="interviewDate" name="interviewDate" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
-            <div>
-                <label for="interviewer">Interviewer:</label>
-                <input type="text" id="interviewer" name="interviewer">
+            <div class="mb-4">
+                <label for="interviewer" class="block text-gray-700 text-sm font-bold mb-2">Interviewer:</label>
+                <input type="text" id="interviewer" name="interviewer" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
         </fieldset>
 
-        <fieldset>
-            <legend>1. Applicant Information</legend>
-            <div>
-                <label for="applicantName">Applicant Name:</label>
-                <input type="text" id="applicantName" name="applicantName">
+        <fieldset class="mb-8 p-6 rounded-lg bg-white border border-gray-200">
+            <legend class="text-lg font-semibold text-gray-700 mb-4">1. Applicant Information</legend>
+            <div class="mb-4">
+                <label for="applicantName" class="block text-gray-700 text-sm font-bold mb-2">Applicant Name:</label>
+                <input type="text" id="applicantName" name="applicantName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
-            <div>
-                <label for="homePhone">Home Phone:</label>
-                <input type="tel" id="homePhone" name="homePhone">
+            <div class="mb-4">
+                <label for="homePhone" class="block text-gray-700 text-sm font-bold mb-2">Home Phone:</label>
+                <input type="tel" id="homePhone" name="homePhone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
-            <div>
-                <label for="cellPhone">Cell Phone:</label>
-                <input type="tel" id="cellPhone" name="cellPhone">
+            <div class="mb-4">
+                <label for="cellPhone" class="block text-gray-700 text-sm font-bold mb-2">Cell Phone:</label>
+                <input type="tel" id="cellPhone" name="cellPhone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
-             <div>
-                <label for="bestTimeToCall">Best Time to Call:</label>
-                <input type="text" id="bestTimeToCall" name="bestTimeToCall">
+            <div class="mb-4">
+                <label for="bestTimeToCall" class="block text-gray-700 text-sm font-bold mb-2">Best Time to Call:</label>
+                <input type="text" id="bestTimeToCall" name="bestTimeToCall" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
-            <div>
-                <label for="emailAddress">Email Address:</label>
-                <input type="email" id="emailAddress" name="emailAddress">
+            <div class="mb-4">
+                <label for="emailAddress" class="block text-gray-700 text-sm font-bold mb-2">Email Address:</label>
+                <input type="email" id="emailAddress" name="emailAddress" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
         </fieldset>
 
-        <fieldset>
-            <legend>2. Veterinary and Pet Information</legend>
-            <div>
-                <label>Veterinarian Check Completed? (Yes/No):</label>
-                <select id="vetCheckCompleted" name="vetCheckCompleted">
+        <fieldset class="mb-8 p-6 rounded-lg bg-white border border-gray-200">
+            <legend class="text-lg font-semibold text-gray-700 mb-4">2. Veterinary and Pet Information</legend>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Veterinarian Check Completed? (Yes/No):</label>
+                <select id="vetCheckCompleted" name="vetCheckCompleted" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                     <option value=""></option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
             </div>
-            <div>
-                <label for="referenceDate">Reference Date:</label>
-                <input type="date" id="referenceDate" name="referenceDate">
+            <div class="mb-4">
+                <label for="referenceDate" class="block text-gray-700 text-sm font-bold mb-2">Reference Date:</label>
+                <input type="date" id="referenceDate" name="referenceDate" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
-            <div>
-                <label for="vetName">Vet Name:</label>
-                <input type="text" id="vetName" name="vetName">
+            <div class="mb-4">
+                <label for="vetName" class="block text-gray-700 text-sm font-bold mb-2">Vet Name:</label>
+                <input type="text" id="vetName" name="vetName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
-            <div>
-                <label for="vetStaff">Staff:</label>
-                <input type="text" id="vetStaff" name="vetStaff">
+            <div class="mb-4">
+                <label for="vetStaff" class="block text-gray-700 text-sm font-bold mb-2">Staff:</label>
+                <input type="text" id="vetStaff" name="vetStaff" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
-            <div>
-                <label for="gidgetInfo">Info on Gidget:</label>
-                <textarea id="gidgetInfo" name="gidgetInfo" rows="4" cols="50"></textarea>
+            <div class="mb-4">
+                <label for="vetFeedback" class="block text-gray-700 text-sm font-bold mb-2">Vet Feedback/Referral:</label>
+                <textarea id="vetFeedback" name="vetFeedback" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
-            <div>
-                <label for="preventatives">Preventatives listed under Gidget's account:</label>
-                <textarea id="preventatives" name="preventatives" rows="4" cols="50"></textarea>
+            <div class="mb-4">
+                <label for="currentDogs" class="block text-gray-700 text-sm font-bold mb-2">Current Dogs:</label>
+                <input type="text" id="currentDogs" name="currentDogs" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
-            <div>
-                <label for="dentalProcedures">Dental procedures:</label>
-                <textarea id="dentalProcedures" name="dentalProcedures" rows="4" cols="50"></textarea>
-            </div>
-            <div>
-                <label for="currentDogs">Current Dogs:</label>
-                <input type="text" id="currentDogs" name="currentDogs">
-            </div>
-            <div>
-                <label for="currentCats">Cats:</label>
-                <input type="text" id="currentCats" name="currentCats">
+            <div class="mb-4">
+                <label for="currentCats" class="block text-gray-700 text-sm font-bold mb-2">Cats:</label>
+                <input type="text" id="currentCats" name="currentCats" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
         </fieldset>
 
-         <fieldset>
-            <legend>3. Housing Information</legend>
-            <div>
-                <label>Landlord Approval Check Completed? (Yes/No):</label>
-                <select id="landlordApproval" name="landlordApproval">
+        <fieldset class="mb-8 p-6 rounded-lg bg-white border border-gray-200">
+            <legend class="text-lg font-semibold text-gray-700 mb-4">3. Housing Information</legend>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Landlord Approval Check Completed? (Yes/No):</label>
+                <select id="landlordApproval" name="landlordApproval" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                     <option value=""></option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
             </div>
-            <div>
-                <label for="housingSummary">Housing Summary:</label>
-                <textarea id="housingSummary" name="housingSummary" rows="10" cols="50"></textarea>
+            <div class="mb-4">
+                <label for="housingSummary" class="block text-gray-700 text-sm font-bold mb-2">Housing Summary:</label>
+                <textarea id="housingSummary" name="housingSummary" rows="10" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </fieldset>
 
-        <fieldset>
-            <legend>4. References</legend>
-            
-            <div class="reference">
-                <label for="ref1Name">Reference 1 Name:</label>
-                <input type="text" id="ref1Name" name="ref1Name">
-                <label for="ref1Date">Date/Time Contacted:</label>
-                <input type="text" id="ref1Date" name="ref1Date">
-                <div>
-                    <label>Would they be a good home and parent for a dachshund?</label>
-                    <select id="ref1GoodHome" name="ref1GoodHome">
+        <fieldset class="mb-8 p-6 rounded-lg bg-white border border-gray-200">
+            <legend class="text-lg font-semibold text-gray-700 mb-4">4. References</legend>
+            <div class="reference mb-6 p-4 bg-white rounded-md border border-gray-200">
+                <div class="mb-4">
+                    <label for="ref1Name" class="block text-gray-700 text-sm font-bold mb-2">Reference 1 Name:</label>
+                    <input type="text" id="ref1Name" name="ref1Name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                 <div class="mb-4">
+                    <label for="ref1Date" class="block text-gray-700 text-sm font-bold mb-2">Date/Time Contacted:</label>
+                    <input type="text" id="ref1Date" name="ref1Date" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Would they be a good home and parent for a dachshund?</label>
+                    <select id="ref1GoodHome" name="ref1GoodHome" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         <option value=""></option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
                 </div>
-                <div>
-                    <label for="ref1Why">What makes you believe that?</label>
-                    <textarea id="ref1Why" name="ref1Why" rows="4" cols="50"></textarea>
+                <div class="mb-4">
+                    <label for="ref1Why" class="block text-gray-700 text-sm font-bold mb-2">What makes you believe that?</label>
+                    <textarea id="ref1Why" name="ref1Why" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
-                <div>
-                    <label for="ref1KnownHowLong">How long have you known them and how?</label>
-                    <textarea id="ref1KnownHowLong" name="ref1KnownHowLong" rows="4" cols="50"></textarea>
+                <div class="mb-4">
+                    <label for="ref1KnownHowLong" class="block text-gray-700 text-sm font-bold mb-2">How long have you known them and how?</label>
+                    <textarea id="ref1KnownHowLong" name="ref1KnownHowLong" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
-                <div>
-                    <label for="ref1Concerns">Do you have any concerns or reservations?</label>
-                    <textarea id="ref1Concerns" name="ref1Concerns" rows="4" cols="50"></textarea>
+                <div class="mb-4">
+                    <label for="ref1Concerns" class="block text-gray-700 text-sm font-bold mb-2">Do you have any concerns or reservations?</label>
+                    <textarea id="ref1Concerns" name="ref1Concerns" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
-                <div>
-                    <label>Would you leave your pet with them?</label>
-                    <select id="ref1LeavePet" name="ref1LeavePet">
-                        <option value=""></option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-            </div>
-
-             <div class="reference">
-                <label for="ref2Name">Reference 2 Name:</label>
-                <input type="text" id="ref2Name" name="ref2Name">
-                <label for="ref2Date">Date/Time Contacted:</label>
-                <input type="text" id="ref2Date" name="ref2Date">
-                <div>
-                    <label>Would they be a good home and parent for a dachshund?</label>
-                    <select id="ref2GoodHome" name="ref2GoodHome">
-                        <option value=""></option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="ref2Why">What makes you believe that?</label>
-                    <textarea id="ref2Why" name="ref2Why" rows="4" cols="50"></textarea>
-                </div>
-                <div>
-                    <label for="ref2KnownHowLong">How long have you known them and how?</label>
-                    <textarea id="ref2KnownHowLong" name="ref2KnownHowLong" rows="4" cols="50"></textarea>
-                </div>
-                <div>
-                    <label for="ref2Concerns">Do you have any concerns or reservations?</label>
-                    <textarea id="ref2Concerns" name="ref2Concerns" rows="4" cols="50"></textarea>
-                </div>
-                <div>
-                    <label>Would you leave your pet with them?</label>
-                    <select id="ref2LeavePet" name="ref2LeavePet">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Would you leave your pet with them?</label>
+                    <select id="ref1LeavePet" name="ref1LeavePet" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         <option value=""></option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -179,34 +142,77 @@
                 </div>
             </div>
 
-            <div class="reference">
-                <label for="ref3Name">Reference 3 Name:</label>
-                <input type="text" id="ref3Name" name="ref3Name">
-                <label for="ref3Date">Date/Time Contacted:</label>
-                <input type="text" id="ref3Date" name="ref3Date">
-                <div>
-                    <label>Would they be a good home and parent for a dachshund?</label>
-                    <select id="ref3GoodHome" name="ref3GoodHome">
+            <div class="reference mb-6 p-4 bg-white rounded-md border border-gray-200">
+                <div class="mb-4">
+                    <label for="ref2Name" class="block text-gray-700 text-sm font-bold mb-2">Reference 2 Name:</label>
+                    <input type="text" id="ref2Name" name="ref2Name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="ref2Date" class="block text-gray-700 text-sm font-bold mb-2">Date/Time Contacted:</label>
+                    <input type="text" id="ref2Date" name="ref2Date" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Would they be a good home and parent for a dachshund?</label>
+                    <select id="ref2GoodHome" name="ref2GoodHome" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         <option value=""></option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
                 </div>
-                <div>
-                    <label for="ref3Why">What makes you believe that?</label>
-                    <textarea id="ref3Why" name="ref3Why" rows="4" cols="50"></textarea>
+                <div class="mb-4">
+                    <label for="ref2Why" class="block text-gray-700 text-sm font-bold mb-2">What makes you believe that?</label>
+                    <textarea id="ref2Why" name="ref2Why" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
-                <div>
-                    <label for="ref3KnownHowLong">How long have you known them and how?</label>
-                    <textarea id="ref3KnownHowLong" name="ref3KnownHowLong" rows="4" cols="50"></textarea>
+                <div class="mb-4">
+                    <label for="ref2KnownHowLong" class="block text-gray-700 text-sm font-bold mb-2">How long have you known them and how?</label>
+                    <textarea id="ref2KnownHowLong" name="ref2KnownHowLong" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
-                <div>
-                    <label for="ref3Concerns">Do you have any concerns or reservations?</label>
-                    <textarea id="ref3Concerns" name="ref3Concerns" rows="4" cols="50"></textarea>
+                <div class="mb-4">
+                    <label for="ref2Concerns" class="block text-gray-700 text-sm font-bold mb-2">Do you have any concerns or reservations?</label>
+                    <textarea id="ref2Concerns" name="ref2Concerns" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
-                <div>
-                    <label>Would you leave your pet with them?</label>
-                    <select id="ref3LeavePet" name="ref3LeavePet">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Would you leave your pet with them?</label>
+                    <select id="ref2LeavePet" name="ref2LeavePet" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value=""></option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="reference mb-6 p-4 bg-white rounded-md border border-gray-200">
+                 <div class="mb-4">
+                    <label for="ref3Name" class="block text-gray-700 text-sm font-bold mb-2">Reference 3 Name:</label>
+                    <input type="text" id="ref3Name" name="ref3Name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="ref3Date" class="block text-gray-700 text-sm font-bold mb-2">Date/Time Contacted:</label>
+                    <input type="text" id="ref3Date" name="ref3Date" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Would they be a good home and parent for a dachshund?</label>
+                    <select id="ref3GoodHome" name="ref3GoodHome" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value=""></option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="ref3Why" class="block text-gray-700 text-sm font-bold mb-2">What makes you believe that?</label>
+                    <textarea id="ref3Why" name="ref3Why" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="ref3KnownHowLong" class="block text-gray-700 text-sm font-bold mb-2">How long have you known them and how?</label>
+                    <textarea id="ref3KnownHowLong" name="ref3KnownHowLong" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="ref3Concerns" class="block text-gray-700 text-sm font-bold mb-2">Do you have any concerns or reservations?</label>
+                    <textarea id="ref3Concerns" name="ref3Concerns" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Wouldyou leave your pet with them?</label>
+                    <select id="ref3LeavePet" name="ref3LeavePet" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         <option value=""></option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -215,104 +221,104 @@
             </div>
         </fieldset>
 
-        <fieldset>
-            <legend>5. Pet Ownership History</legend>
-            <div>
-                <label for="previousDogsHow">Tell me about previous dogs: How did you get them?</label>
-                <textarea id="previousDogsHow" name="previousDogsHow" rows="4" cols="50"></textarea>
+        <fieldset class="mb-8 p-6 rounded-lg bg-white border border-gray-200">
+            <legend class="text-lg font-semibold text-gray-700 mb-4">5. Pet Ownership History</legend>
+            <div class="mb-4">
+                <label for="previousDogsHow" class="block text-gray-700 text-sm font-bold mb-2">Tell me about previous dogs: How did you get them?</label>
+                <textarea id="previousDogsHow" name="previousDogsHow" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
-            <div>
-                <label for="previousDogsLength">How long did you have them?</label>
-                <textarea id="previousDogsLength" name="previousDogsLength" rows="4" cols="50"></textarea>
+            <div class="mb-4">
+                <label for="previousDogsLength" class="block text-gray-700 text-sm font-bold mb-2">How long did you have them?</label>
+                <textarea id="previousDogsLength" name="previousDogsLength" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
-             <div>
-                <label for="previousDogsWhatHappened">What happened to previous dogs?</label>
-                <textarea id="previousDogsWhatHappened" name="previousDogsWhatHappened" rows="4" cols="50"></textarea>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>6. Current Pets Behavior</legend>
-             <div>
-                <label for="dogsGetAlong">How do/did your dog(s) get along with other dogs?</label>
-                <textarea id="dogsGetAlong" name="dogsGetAlong" rows="4" cols="50"></textarea>
+            <div class="mb-4">
+                <label for="previousDogsWhatHappened" class="block text-gray-700 text-sm font-bold mb-2">What happened to previous dogs?</label>
+                <textarea id="previousDogsWhatHappened" name="previousDogsWhatHappened" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </fieldset>
 
-        <fieldset>
-             <legend>7. Motivation and Preparedness</legend>
-            <div>
-                <label for="whyDachshund">Why do you want a dachshund?</label>
-                <textarea id="whyDachshund" name="whyDachshund" rows="4" cols="50"></textarea>
-            </div>
-            <div>
-                <label for="pottyTrainingApproach">How would you approach potty training?</label>
-                <textarea id="pottyTrainingApproach" name="pottyTrainingApproach" rows="4" cols="50"></textarea>
-            </div>
-            <div>
-                <label for="hoursAwayHome">How many hours a day are you away from home?</label>
-                <textarea id="hoursAwayHome" name="hoursAwayHome" rows="4" cols="50"></textarea>
-            </div>
-            <div>
-                <label for="dogStayWhenAway">Where will the dog stay when you're away or at night?</label>
-                <textarea id="dogStayWhenAway" name="dogStayWhenAway" rows="4" cols="50"></textarea>
+        <fieldset class="mb-8 p-6 rounded-lg bg-white border border-gray-200">
+            <legend class="text-lg font-semibold text-gray-700 mb-4">6. Current Pets Behavior</legend>
+            <div class="mb-4">
+                <label for="dogsGetAlong" class="block text-gray-700 text-sm font-bold mb-2">How do/did your dog(s) get along with other dogs?</label>
+                <textarea id="dogsGetAlong" name="dogsGetAlong" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </fieldset>
 
-        <fieldset>
-            <legend>8. Living Situation</legend>
-            <div>
-                <label for="fenceInfo">What kind of fence do you have, or if none, how will you exercise and potty the dog?</label>
-                <textarea id="fenceInfo" name="fenceInfo" rows="4" cols="50"></textarea>
+        <fieldset class="mb-8 p-6 rounded-lg bg-white border border-gray-200">
+            <legend class="text-lg font-semibold text-gray-700 mb-4">7. Motivation and Preparedness</legend>
+            <div class="mb-4">
+                <label for="whyDachshund" class="block text-gray-700 text-sm font-bold mb-2">Why do you want a dachshund?</label>
+                <textarea id="whyDachshund" name="whyDachshund" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
-            <div>
-                <label>If living in an apartment, do you understand that owning a dog requires taking it outside at least twice daily regardless of weather?</label>
-                <select id="apartmentDogCareAwareness" name="apartmentDogCareAwareness">
+            <div class="mb-4">
+                <label for="pottyTrainingApproach" class="block text-gray-700 text-sm font-bold mb-2">How would you approach potty training?</label>
+                <textarea id="pottyTrainingApproach" name="pottyTrainingApproach" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="hoursAwayHome" class="block text-gray-700 text-sm font-bold mb-2">How many hours a day are you away from home?</label>
+                <textarea id="hoursAwayHome" name="hoursAwayHome" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="dogStayWhenAway" class="block text-gray-700 text-sm font-bold mb-2">Where will the dog stay when you're away or at night?</label>
+                <textarea id="dogStayWhenAway" name="dogStayWhenAway" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset class="mb-8 p-6 rounded-lg bg-white border border-gray-200">
+            <legend class="text-lg font-semibold text-gray-700 mb-4">8. Living Situation</legend>
+            <div class="mb-4">
+                <label for="fenceInfo" class="block text-gray-700 text-sm font-bold mb-2">What kind of fence do you have, or if none, how will you exercise and potty the dog?</label>
+                <textarea id="fenceInfo" name="fenceInfo" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">If living in an apartment, do you understand that owning a dog requires taking it outside at least twice daily regardless of weather?</label>
+                <select id="apartmentDogCareAwareness" name="apartmentDogCareAwareness" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                     <option value=""></option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
-                    <option value="N/A">N/A</option>
+                     <option value="N/A">N/A</option>
                 </select>
             </div>
         </fieldset>
 
-        <fieldset>
-            <legend>9. Adoption Preferences</legend>
-            <div>
-                <label for="dogPreferences">What size, age, and gender are you looking for in a dachshund?</label>
-                <textarea id="dogPreferences" name="dogPreferences" rows="4" cols="50"></textarea>
+        <fieldset class="mb-8 p-6 rounded-lg bg-white border border-gray-200">
+            <legend class="text-lg font-semibold text-gray-700 mb-4">9. Adoption Preferences</legend>
+            <div class="mb-4">
+                <label for="dogPreferences" class="block text-gray-700 text-sm font-bold mb-2">What size, age, and gender are you looking for in a dachshund?</label>
+                <textarea id="dogPreferences" name="dogPreferences" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
-            <div>
-                <label for="interestedParticularDog">Are you interested in a particular dog?</label>
-                <textarea id="interestedParticularDog" name="interestedParticularDog" rows="4" cols="50"></textarea>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>10. Final Steps</legend>
-            <div>
-                <label for="adoptionStepsConfirmation">Confirm understanding of adoption steps:</label>
-                <textarea id="adoptionStepsConfirmation" name="adoptionStepsConfirmation" rows="4" cols="50"></textarea>
-            </div>
-            <div>
-                <label for="referenceEmailInfo">Emails have been sent to all references.  (Info):</label>
-                <textarea id="referenceEmailInfo" name="referenceEmailInfo" rows="4" cols="50"></textarea>
-            </div>
-            <div>
-                 <label for="approvalEmailInfo">Approval email will come from Teresa; reply to start matching with available dogs. (Info):</label>
-                <textarea id="approvalEmailInfo" name="approvalEmailInfo" rows="4" cols="50"></textarea>
+            <div class="mb-4">
+                <label for="interestedParticularDog" class="block text-gray-700 text-sm font-bold mb-2">Are you interested in a particular dog?</label>
+                <textarea id="interestedParticularDog" name="interestedParticularDog" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </fieldset>
 
-        <fieldset>
-             <legend>11. Final thoughts from CTDR Volunteer</legend>
-            <div>
-                <label for="finalThoughts">Final thoughts:</label>
-                <textarea id="finalThoughts" name="finalThoughts" rows="6" cols="50"></textarea>
+        <fieldset class="mb-8 p-6 rounded-lg bg-white border border-gray-200">
+            <legend class="text-lg font-semibold text-gray-700 mb-4">10. Final Steps</legend>
+            <div class="mb-4">
+                <label for="adoptionStepsConfirmation" class="block text-gray-700 text-sm font-bold mb-2">Confirm understanding of adoption steps:</label>
+                <textarea id="adoptionStepsConfirmation" name="adoptionStepsConfirmation" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="referenceEmailInfo" class="block text-gray-700 text-sm font-bold mb-2">Emails have been sent to all references.  (Info):</label>
+                <textarea id="referenceEmailInfo" name="referenceEmailInfo" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+             <div class="mb-4">
+                 <label for="approvalEmailInfo" class="block text-gray-700 text-sm font-bold mb-2">Approval email will come from Teresa; reply to start matching with available dogs. (Info):</label>
+                <textarea id="approvalEmailInfo" name="approvalEmailInfo" rows="4" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </fieldset>
 
-        <button type="submit">Submit</button>
+        <fieldset class="mb-8 p-6 rounded-lg bg-white border border-gray-200">
+            <legend class="text-lg font-semibold text-gray-700 mb-4">11. Final thoughts from CTDR Volunteer</legend>
+            <div class="mb-4">
+                <label for="finalThoughts" class="block text-gray-700 text-sm font-bold mb-2">Final thoughts:</label>
+                <textarea id="finalThoughts" name="finalThoughts" rows="6" cols="50" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
     </form>
 
 </body>
