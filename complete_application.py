@@ -2,8 +2,15 @@ from flask import Flask, render_template, request, jsonify, session, redirect, u
 import json
 import dotenv
 import os 
+from your_app.admin.views import admin_bp  # Import the Blueprint
+import firebase_admin
+from firebase_admin import credentials, firestore
+
+cred = credentials.Certificate("path/to/your/firebase_credentials.json")  # TODO:  Replace with your credentials
+firebase_admin.initialize_app(cred)
 
 app = Flask(__name__)
+app.register_blueprint(admin_bp)  # Register the Blueprint
 
 app.secret_key = os.environ.get("FLASK_SECRET_KEY")
 if not app.secret_key:
